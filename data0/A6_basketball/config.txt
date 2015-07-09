@@ -1,0 +1,27 @@
+<param>
+
+// -updateFg - -updateBg - -updateBgKNN - -updateBgTransform - 
+
+ -fgWorkScale 1.0
+
+ //scale, dx, dy
+ -bgInitTransform 1.2 0 0
+
+ //row_start, row_end, col_start, col_end
+ -fgMask 0.5 1 0 1   
+ 
+-bgMask  0.5 1 0 1  -useFarNbrs - 
+-firstFrame 0 -1
+
+-fgStartEndPos 0 -1
+
+ -MAX_DST_ERROR 0.2 -MAX_TSF_ERROR 0 -motion 0 1 -fgExtension -80 -40 -40 -40
+-footSmoothWSZ 25
+
+//choose one method  
+ -dpMethod 2 -wc 1000 -wt 10 -ws 0.1 -wd 0.1
+
+ -shadow +
+ -shadowShape 0 0  1 0  0.85 0.3   -0.15 0.3
+
+</param>

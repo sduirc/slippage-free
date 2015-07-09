@@ -1,0 +1,37 @@
+<param>
+
+ //comment this line to recompute all
+ //uncomment this line to run only DP without preprocessing
+ //-updateFg - -updateBg - -updateBgKNN - -updateBgTransform -
+
+ -fgWorkScale 0.5  
+
+ //scale, dx, dy
+ -bgInitTransform 1.2 0 0
+
+ //sub-region of fg main ground (row_start, row_end, col_start, col_end)
+ -fgMask 0 1 0 1   
+ //sub-region of bg main ground
+ -bgMask  0 1 0 1  
+ //whether to use remote jumps
+ -useFarNbrs - 
+ //is dynamic background?
+ -dynamicBG -
+
+//range of fg sequence
+ -fgStartEndPos 0 -1
+ //range of \hat{B'_0}
+ -firstFrame 0 -1
+ //rij, dij, hybrid motion models and the adjustments of clipping region
+ -MAX_DST_ERROR 0.2 -MAX_TSF_ERROR 3 -motion 0 1  -fgExtension 0 0 0 0 
+ //window size to smooth fg footpoint
+ -footSmoothWSZ 25
+
+//weights of DP  
+ -dpMethod 2 -wc 1000 -wt 10 -ws 0.1 -wd 0.1
+ 
+//shadow parameters
+ -shadow +
+ -shadowShape 0 0  1 0  1.3 0.3   0.3 0.3
+
+</param>
